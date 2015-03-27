@@ -166,10 +166,10 @@ void CSystemManager::Draw(void)
 	m_pRenderer->Clear();
 	//Rendering...
 
-	//g_pSprite2->Draw();
-	//g_pSprite->Draw();
-
 	m_pSceneManager->Draw();
+
+	g_pSprite2->Draw();
+	g_pSprite->Draw();
 
 	//const auto startTime = std::chrono::system_clock::now();
 	////// TODO: ‚±‚±‚ÉŒv‘ª‚µ‚½‚¢ˆ—‚ğ‹Lq

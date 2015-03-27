@@ -34,6 +34,7 @@ m_pBackground(nullptr)
 	using namespace ns_TitleConstant;
 	using namespace ns_ConstantTable;
 
+
 	const CSprite::PARAM param1 = { XMFLOAT2(SCREEN_WIDTH  * 0.5f, SCREEN_HEIGHT* 0.5f), 0.0f, L"Resources/Texture/BlockTexture.png" };
 	m_pBackground = new CSprite(param1);
 	m_pBackground->SetWidth(SCREEN_WIDTH);
@@ -45,7 +46,7 @@ m_pBackground(nullptr)
 */
 CSceneTitle::~CSceneTitle(void)
 {
-	SafeDelete(m_pBackground);
+	//SafeDelete(m_pBackground);
 }
 
 /**
@@ -67,6 +68,8 @@ void CSceneTitle::Update(void)
 		CSceneManager *pSm = GETSCENEMANAGER;
 		pSm->GotoScene(CSceneManager::SCENE_TYPE_GAME);
 	}
+
+	m_pBackground->Update();
 }
 
 /**
