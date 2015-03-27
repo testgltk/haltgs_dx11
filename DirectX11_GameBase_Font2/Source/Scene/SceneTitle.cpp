@@ -35,6 +35,8 @@ CSceneTitle::CSceneTitle(void)
 	m_pBG->SetPolygonAlign(CSprite::ALIGN_LEFT_TOP);
 
 	m_pPushEnter = new CSprite(pe_param);
+	m_alpha = 0.0f;
+	m_rate = 0.1f;
 }
 
 /**
@@ -56,6 +58,22 @@ void CSceneTitle::Update(void)
 	using namespace ns_TitleConstant;
 
 	m_pBG->Update();
+
+	m_alpha += m_rate;
+
+	if(m_alpha <= 0.0f)
+	{
+		m_alpha = 0.0f;
+		m_rate *= -1;
+	}
+	if(m_alpha >= 1.0f)
+	{
+		m_alpha = 1.0f;
+		m_rate *= -1;
+	}
+
+	m_pPushEnter->SetColor(XMFLOAT4(1.0f,1.0f,1.0f,m_alpha));
+
 	m_pPushEnter->Update();
 }
 
