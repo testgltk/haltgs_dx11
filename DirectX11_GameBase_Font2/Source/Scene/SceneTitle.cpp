@@ -26,12 +26,15 @@ namespace ns_TitleConstant
 */
 CSceneTitle::CSceneTitle(void)
 {
-	CSprite::PARAM param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/BlockTexture.png"};
+	CSprite::PARAM bg_param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/TitleBg.png"};
+	CSprite::PARAM pe_param = {XMFLOAT2(ns_ConstantTable::SCREEN_WIDTH * 0.5f,ns_ConstantTable::SCREEN_HEIGHT - 100.0f),0.0f,L"Resources/Texture/PushEnter.png"};
 	using namespace ns_TitleConstant;
-	m_pBG = new CSprite(param);
+	m_pBG = new CSprite(bg_param);
 	m_pBG->SetWidth(ns_ConstantTable::SCREEN_WIDTH);
 	m_pBG->SetHeight(ns_ConstantTable::SCREEN_HEIGHT);
 	m_pBG->SetPolygonAlign(CSprite::ALIGN_LEFT_TOP);
+
+	m_pPushEnter = new CSprite(pe_param);
 }
 
 /**
@@ -40,6 +43,7 @@ CSceneTitle::CSceneTitle(void)
 CSceneTitle::~CSceneTitle(void)
 {
 	SafeDelete(m_pBG);
+	SafeDelete(m_pPushEnter);
 }
 
 /**
@@ -52,6 +56,7 @@ void CSceneTitle::Update(void)
 	using namespace ns_TitleConstant;
 
 	m_pBG->Update();
+	m_pPushEnter->Update();
 }
 
 /**
@@ -62,4 +67,5 @@ void CSceneTitle::Update(void)
 void CSceneTitle::Draw(void)
 {
 	m_pBG->Draw();
+	m_pPushEnter->Draw();
 }
