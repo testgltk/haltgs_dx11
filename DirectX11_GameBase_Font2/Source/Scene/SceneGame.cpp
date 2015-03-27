@@ -9,7 +9,7 @@
 //	インクルード
 //------------------------------------------------------------------------------
 #include "SceneGame.h"
-
+#include "Sprite/Sprite.h"
 
 
 //------------------------------------------------------------------------------
@@ -27,6 +27,13 @@ namespace ns_GameConstant
 */
 CSceneGame::CSceneGame(void)
 {
+	// 背景生成
+	CSprite::PARAM param = { XMFLOAT2(0, 0), 0.0f, L"Resources/Texture/field001.jpg" };
+	m_pBG = new CSprite(param);
+	m_pBG->SetWidth(ns_ConstantTable::SCREEN_WIDTH);
+	m_pBG->SetHeight(ns_ConstantTable::SCREEN_HEIGHT);
+	m_pBG->SetPolygonAlign(CSprite::ALIGN_LEFT_TOP);
+
 	//カメラ設定をリセット
 
 
@@ -46,6 +53,9 @@ CSceneGame::~CSceneGame(void)
 {
 	//ゲームデータの破棄
 	DestroyDatas();
+
+	// 背景の開放
+	SafeDelete(m_pBG);
 }
 
 /**
@@ -120,10 +130,19 @@ void CSceneGame::DestroyObjectManager(void)
 
 void CSceneGame::UpdateExec(void)
 {
-	
+	// オブジェクト更新
+
+	// 背景更新
+	m_pBG->Update();
+
+	// 当たり判定
 }
 void CSceneGame::DrawExec(void)
 {
+	// 背景描画
+	m_pBG->Draw();
 
+	// 建物とか
 
+	// プレイヤーとか
 }

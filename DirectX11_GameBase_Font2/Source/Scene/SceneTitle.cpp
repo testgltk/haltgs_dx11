@@ -9,7 +9,15 @@
 //	インクルード
 //------------------------------------------------------------------------------
 #include "SceneTitle.h"
+
+// Sprite
 #include "Sprite/Sprite.h"
+
+// Input
+#include "Input/InputKeyboard.h"
+
+// System
+#include "System/SystemManager.h"
 
 //------------------------------------------------------------------------------
 //	定数
@@ -51,6 +59,13 @@ void CSceneTitle::Update(void)
 {
 	using namespace ns_TitleConstant;
 
+	CInputKeyboard* input_keyboard = GETINPUTKEYBOARD;
+
+	if(input_keyboard->IsKeyTrigger(DIK_RETURN))
+	{
+		CSceneManager* scene_manager = GETSCENEMANAGER;
+		scene_manager->GotoScene(CSceneManager::SCENE_TYPE_GAME);
+	}
 	m_pBG->Update();
 }
 
