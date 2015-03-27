@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿2015/03/27 15:56:27 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット)。
      1>InitializeBuildStatus:
@@ -17,6 +18,12 @@
      1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\human\human.cpp(131): warning C4244: '=' : 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.lib" /MACHINE:X86 Debug\Common.obj
+=======
+﻿2015/03/27 12:43:33 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット)。
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Debug\DirectX11_GameBase.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Debug\DirectX11_GameBase.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Debug\DirectX11_GameBase.lib" /MACHINE:X86 Debug\Common.obj
+>>>>>>> origin/dev/title
          Debug\Collision.obj
          Debug\CollisionDetector.obj
          Debug\DebugModule.obj
@@ -59,4 +66,8 @@
 
 ビルドに成功しました。
 
+<<<<<<< HEAD
 経過時間 00:00:01.32
+=======
+経過時間 00:00:00.65
+>>>>>>> origin/dev/title

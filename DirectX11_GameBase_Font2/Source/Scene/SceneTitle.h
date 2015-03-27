@@ -55,6 +55,9 @@ public:
 
 private:
 	CSprite* m_pBG;
+	CSprite* m_pPushEnter;
+	float m_alpha;
+	float m_rate;
 };
 #endif
 //End of File _SCENETITLE_H_
