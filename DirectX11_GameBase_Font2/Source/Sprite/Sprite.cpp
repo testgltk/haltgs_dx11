@@ -282,7 +282,7 @@ void CSprite::SetPolygonAlign(CSprite::ALIGN align)
 	D3D11_MAPPED_SUBRESOURCE mappedResource;
 	m_pDevContext->Map(m_pVertexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
 	Vertex3D* pVertex = (Vertex3D*)mappedResource.pData;
-
+	
 	if (align == ALIGN_LEFT_TOP)
 	{
 		pVertex[0].Position = XMFLOAT3(	  0.0f,     0.0f, 0.0f);

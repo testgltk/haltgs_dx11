@@ -40,11 +40,11 @@ FontTexture::~FontTexture()
 	SelectObject(m_HDC, m_OldFont);
 	DeleteObject(m_HFont);
 	ReleaseDC(NULL, m_HDC);
-
 	if (m_Once)
 	{
 		for (int i = 0; i < MAX_CHAR_SIZE; i++)
 		{
+			SafeRelease(m_Datas[i].m_tex2D);
 			SafeRelease(m_Datas[i].m_pTextureResource);
 		}
 
@@ -220,6 +220,7 @@ ID3D11ShaderResourceView* FontTexture::Create(TCHAR* c, int fontsize)
 	srvDesc.Texture2D.MipLevels			= texDesc.MipLevels;
 	hr = pDevice->CreateShaderResourceView(tex2D, &srvDesc, &m_Datas[hitID].m_pTextureResource);
 	
+	m_Datas[hitID].m_tex2D = tex2D;
 	//SafeRelease(tex2D);
 	SafeDeleteArray(ptr);
 
