@@ -48,7 +48,7 @@ CSystemManager::CSystemManager(void)
 
 	m_pKeyboard->Initialize(GetHinstance(), GetHWnd());
 	m_pMouse->Initialize(GetHinstance(), GetHWnd());
-
+	
 
 	Font = new FontTexture();
 	Font->Create(TEXT("A"), 256);
