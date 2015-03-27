@@ -9,6 +9,7 @@
 //	インクルード
 //------------------------------------------------------------------------------
 #include "SceneTitle.h"
+#include "system/systemmanager.h"
 #include "Sprite/Sprite.h"
 
 //------------------------------------------------------------------------------
@@ -75,6 +76,15 @@ void CSceneTitle::Update(void)
 	m_pPushEnter->SetColor(XMFLOAT4(1.0f,1.0f,1.0f,m_alpha));
 
 	m_pPushEnter->Update();
+
+	CInputKeyboard* input_keyboard = GETINPUTKEYBOARD;
+
+	if(input_keyboard->IsKeyTrigger(DIK_RETURN))
+	{
+		CSceneManager* scene_manager = GETSCENEMANAGER;
+		scene_manager->GotoScene(CSceneManager::SCENE_TYPE_GAME);
+	}
+
 }
 
 /**
