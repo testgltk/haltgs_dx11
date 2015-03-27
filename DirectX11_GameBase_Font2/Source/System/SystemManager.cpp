@@ -53,7 +53,7 @@ CSystemManager::CSystemManager(void)
 	Font = new FontTexture();
 	Font->Create(TEXT("A"), 256);
 	pString = new CFontString();
-	
+
 }
 
 CSystemManager::~CSystemManager(void)
@@ -166,8 +166,8 @@ void CSystemManager::Draw(void)
 	m_pRenderer->Clear();
 	//Rendering...
 
-	g_pSprite2->Draw();
-	g_pSprite->Draw();
+	//g_pSprite2->Draw();
+	//g_pSprite->Draw();
 
 	m_pSceneManager->Draw();
 
@@ -181,6 +181,10 @@ void CSystemManager::Draw(void)
 	
 	pString->Draw();
 	m_pRenderer->Present();
+
+
+	// ƒV[ƒ“‘JˆÚ
+	m_pSceneManager->Change();
 }
 
 void CSystemManager::Finalize(void)

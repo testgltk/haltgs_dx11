@@ -23,9 +23,9 @@ CSceneManager::CSceneManager(void)
 	, m_pSceneNext(nullptr)
 	, m_bReloadScene(false)
 {
-	m_SceneType			= SCENE_TYPE_LOGO;
-	m_SceneTypeNext		= SCENE_TYPE_LOGO;
-	m_pScene			= new CSceneLogo();
+	m_SceneType			= SCENE_TYPE_TITLE;
+	m_SceneTypeNext		= SCENE_TYPE_TITLE;
+	m_pScene			= new CSceneTitle();
 }
 
 CSceneManager::~CSceneManager(void)

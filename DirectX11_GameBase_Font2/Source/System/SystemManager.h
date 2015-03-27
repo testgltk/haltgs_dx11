@@ -43,6 +43,8 @@ public:
 	ID3D11Device* GetDevice(void);
 	ID3D11DeviceContext* GetDeviceContext(void);
 
+	CSceneManager* GetSceneManager(void){ return m_pSceneManager; }
+
 	/**
 	*	インスタンス取得処理
 	*	@param	void
@@ -65,4 +67,7 @@ private:
 
 #define GETDEVICE			 CSystemManager::GetInstance()->GetDevice();
 #define GETDEVICECONTEXT	 CSystemManager::GetInstance()->GetDeviceContext();
+#define GETINPUTKEYBOARD	 CSystemManager::GetInstance()->GetKeyboard();
+#define GETINPUTMOUSE		 CSystemManager::GetInstance()->GetMouse();
+#define GETSCENEMANAGER		 CSystemManager::GetInstance()->GetSceneManager();
 #endif
