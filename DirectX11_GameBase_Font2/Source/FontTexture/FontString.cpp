@@ -29,7 +29,7 @@ CFontString::CFontString()
 
 CFontString::~CFontString(void)
 {
-	for (int i = 0; i < MAX_FONT_DISP_SIZE; i++)
+	for (int i = 0; i < MAX_FONT_DISP_SIZE - 1; i++)
 	{
 		m_pSprites[i]->SetTextureNone();
 		SafeDelete(m_pFontTextures[i]);

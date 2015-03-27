@@ -39,7 +39,7 @@ class CSprite;
 class CFontString
 {
 public:
-	static const u16 MAX_FONT_DISP_SIZE = 1024;		///> 文字列の表示限界数
+	static const u16 MAX_FONT_DISP_SIZE = 255;		///> 文字列の表示限界数
 	static const u8 OFFSET_X			= 32;		///> 文字間隔X
 	static const u8 OFFSET_Y			= 32;		///> 文字間隔Y
 	static const u16 BUFFER_MAX			= 1024;		///> 文字列解析用のバッファ限界

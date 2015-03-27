@@ -30,6 +30,7 @@ public:
 	{
 		ID3D11ShaderResourceView* m_pTextureResource;	///> 対応するテクスチャ情報
 		UINT m_charCode;								///> 格納文字列
+		ID3D11Texture2D* m_tex2D;
 	} DATA;
 
 	/**
@@ -59,7 +60,7 @@ private:
 	static HFONT	m_OldFont;				///> 交換用のフォントハンドル
 	static HDC		m_HDC;					///> Windows用の描画ハンドル
 	static bool		m_Once;					///> クラス一回処理用フラグ
-	static DATA		m_Datas[512];			///> 格納情報構造体
+	static DATA		m_Datas[MAX_CHAR_SIZE];			///> 格納情報構造体
 };
 #endif
 // End of File _FONTTEXTURE_H_

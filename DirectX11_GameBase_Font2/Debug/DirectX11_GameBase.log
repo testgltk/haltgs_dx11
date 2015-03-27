@@ -1,11 +1,11 @@
-﻿2015/03/18 22:42:32 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\Public\Documents\directX_11\DirectX11_GameBase\DirectX11_GameBase.vcxproj" (Build ターゲット)。
+﻿2015/03/27 9:51:34 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Source /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include" /ZI /nologo /W4 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\DirectX11_GameBase.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4505 /FIstdafx.h /FICommon/Common.h /analyze- /errorReport:prompt Source\System\SystemManager.cpp
-         SystemManager.cpp
-     1>c:\users\public\documents\directx_11\directx11_gamebase\source\system\systemmanager.cpp(33): warning C4351: 新しい動作: 配列 'CSystemManager::m_pSystems' の要素は既定で初期化されます
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Source /ZI /nologo /W4 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\DirectX11_GameBase.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4505 /FIstdafx.h /FICommon/Common.h /analyze- /errorReport:prompt Source\FontTexture\FontString.cpp
+         FontString.cpp
+     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\fonttexture\fontstring.cpp(46): warning C4244: '=' : 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Public\Documents\directX_11\DirectX11_GameBase\Debug\DirectX11_GameBase.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Public\Documents\directX_11\DirectX11_GameBase\Debug\DirectX11_GameBase.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Public\Documents\directX_11\DirectX11_GameBase\Debug\DirectX11_GameBase.lib" /MACHINE:X86 Debug\Common.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Debug\DirectX11_GameBase.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Debug\DirectX11_GameBase.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Debug\DirectX11_GameBase.lib" /MACHINE:X86 Debug\Common.obj
          Debug\Collision.obj
          Debug\CollisionDetector.obj
          Debug\DebugModule.obj
@@ -38,9 +38,9 @@
          Debug\Sprite.obj
          Debug\SystemManager.obj
          Debug\Timer.obj
-         DirectX11_GameBase.vcxproj -> C:\Users\Public\Documents\directX_11\DirectX11_GameBase\Debug\DirectX11_GameBase.exe
-     1>プロジェクト "C:\Users\Public\Documents\directX_11\DirectX11_GameBase\DirectX11_GameBase.vcxproj" (Build ターゲット) のビルドが完了しました。
+         DirectX11_GameBase.vcxproj -> D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Debug\DirectX11_GameBase.exe
+     1>プロジェクト "D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:00.50
+経過時間 00:00:00.93

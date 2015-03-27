@@ -200,7 +200,7 @@ void CRenderer::Clear(void)
 	//pHwndRenderTarget->DrawTextW(wst.c_str(), wst.size(), pFom, rect, pGreenBrush);
 	//pHwndRenderTarget->EndDraw();
 
-	static const float ClearColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
+	static const float ClearColor[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
 	m_pImmediateContext->ClearRenderTargetView(m_pRenderTargetView, ClearColor);
 
 
