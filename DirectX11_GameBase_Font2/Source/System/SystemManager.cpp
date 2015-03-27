@@ -174,6 +174,8 @@ void CSystemManager::Draw(void)
 	
 	pString->Draw();
 	m_pRenderer->Present();
+
+	m_pSceneManager->Change();
 }
 
 void CSystemManager::Finalize(void)

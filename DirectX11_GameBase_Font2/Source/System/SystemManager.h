@@ -11,6 +11,7 @@
 #pragma once
 #ifndef _SYSTEMMANAGER_H_
 #define _SYSTEMMANAGER_H_
+#include "Scene/SceneManager.h"
 
 //------------------------------------------------------------------------------
 //	前方宣言
@@ -41,6 +42,7 @@ public:
 
 	ID3D11Device* GetDevice(void);
 	ID3D11DeviceContext* GetDeviceContext(void);
+	CSceneManager* GetSceneManager(void) { return m_pSceneManager; }
 
 	/**
 	*	インスタンス取得処理
@@ -63,4 +65,6 @@ private:
 
 #define GETDEVICE			 CSystemManager::GetInstance()->GetDevice();
 #define GETDEVICECONTEXT	 CSystemManager::GetInstance()->GetDeviceContext();
+#define GETINPUTKEYBOARD	 CSystemManager::GetInstance()->GetKeyboard();
+#define GETSCENEMANAGER		 CSystemManager::GetInstance()->GetSceneManager();
 #endif

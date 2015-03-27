@@ -9,7 +9,7 @@
 //	インクルード
 //------------------------------------------------------------------------------
 #include "SceneTitle.h"
-
+#include "Sprite/Sprite.h"
 
 //------------------------------------------------------------------------------
 //	定数
@@ -27,8 +27,9 @@ namespace ns_TitleConstant
 CSceneTitle::CSceneTitle(void)
 	
 {
+	CSprite::PARAM param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/BlockTexture.png"};
 	using namespace ns_TitleConstant;
-
+	m_pBG = new CSprite(param);
 }
 
 /**
@@ -36,7 +37,7 @@ CSceneTitle::CSceneTitle(void)
 */
 CSceneTitle::~CSceneTitle(void)
 {
-	
+	SafeDelete(m_pBG);
 }
 
 /**
@@ -48,7 +49,7 @@ void CSceneTitle::Update(void)
 {
 	using namespace ns_TitleConstant;
 
-	
+	m_pBG->Update();
 }
 
 /**
@@ -58,5 +59,5 @@ void CSceneTitle::Update(void)
 */
 void CSceneTitle::Draw(void)
 {
-
+	m_pBG->Draw();
 }
