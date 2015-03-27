@@ -189,3 +189,12 @@ framework/framework.pdb
 *.suo
 *.user
 *.bak
+DirectX11_GameBase_Font2/DirectX11_GameBase.opensdf
+DirectX11_GameBase_Font2/Debug/DirectX11_GameBase.ilk
+DirectX11_GameBase_Font2/Debug/DirectX11_GameBase.log
+DirectX11_GameBase_Font2/Debug/DirectX11_GameBase.pch
+DirectX11_GameBase_Font2/Debug/DirectX11_GameBase.pdb
+DirectX11_GameBase_Font2/Debug/vc120.idb
+DirectX11_GameBase_Font2/Debug/vc120.pdb
+DirectX11_GameBase_Font2/DirectX11_GameBase.sdf
+DirectX11_GameBase_Font2/ipch/directx11_gamebase-d13c588a/directx11_gamebase-4c245615.ipch
