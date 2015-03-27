@@ -51,6 +51,9 @@
     <Filter Include="FontTexture">
       <UniqueIdentifier>{74e3984c-c20d-4df9-8ff9-15c77ff82add}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Human">
+      <UniqueIdentifier>{c722d7c7-f270-48bf-807f-b8a563ad9454}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\stdafx.h">
@@ -176,6 +179,15 @@
     <ClInclude Include="Source\FontTexture\FontString.h">
       <Filter>FontTexture</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Common\kbList.h">
+      <Filter>Source\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Object2DHuman.h">
+      <Filter>Source\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Human\Human.h">
+      <Filter>Source\Human</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -276,6 +288,12 @@
     </ClCompile>
     <ClCompile Include="Source\FontTexture\FontString.cpp">
       <Filter>FontTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Object2DHuman.cpp">
+      <Filter>Source\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Human\Human.cpp">
+      <Filter>Source\Human</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

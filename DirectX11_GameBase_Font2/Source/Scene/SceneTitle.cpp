@@ -34,7 +34,7 @@ namespace ns_TitleConstant
 */
 CSceneTitle::CSceneTitle(void)
 {
-	CSprite::PARAM param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/BlockTexture.png"};
+	CSprite::PARAM param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/TITLEBG2.png"};
 	using namespace ns_TitleConstant;
 	m_pBG = new CSprite(param);
 	m_pBG->SetWidth(ns_ConstantTable::SCREEN_WIDTH);

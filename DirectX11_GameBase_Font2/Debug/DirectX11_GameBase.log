@@ -1,25 +1,20 @@
-﻿2015/03/27 12:28:28 にビルドを開始しました。
+﻿2015/03/27 15:56:27 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット)。
      1>InitializeBuildStatus:
          "AlwaysCreate" が指定されたため "Debug\DirectX1.DCE7FCA3.tlog\unsuccessfulbuild" を作成しています。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Source /ZI /nologo /W4 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\DirectX11_GameBase.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4505 /FIstdafx.h /FICommon/Common.h /analyze- /errorReport:prompt Source\FontTexture\fontTexture.cpp Source\Main.cpp Source\Scene\SceneGame.cpp Source\Scene\SceneLogo.cpp Source\Scene\SceneManager.cpp Source\Scene\SceneTitle.cpp Source\Sprite\Sprite.cpp Source\System\SystemManager.cpp
-         SystemManager.cpp
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\system\systemmanager.cpp(33): warning C4351: 新しい動作: 配列 'CSystemManager::m_pSystems' の要素は既定で初期化されます
-         Sprite.cpp
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\sprite\sprite.cpp(66): warning C4189: 'pDevice' : ローカル変数が初期化されましたが、参照されていません
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\sprite\sprite.cpp(247): warning C4244: '=' : 'UINT' から 'float' への変換です。データが失われる可能性があります。
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\sprite\sprite.cpp(248): warning C4244: '=' : 'UINT' から 'float' への変換です。データが失われる可能性があります。
-         SceneTitle.cpp
-         SceneManager.cpp
-         SceneLogo.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Source /ZI /nologo /W4 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\DirectX11_GameBase.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4505 /FIstdafx.h /FICommon/Common.h /analyze- /errorReport:prompt Source\Human\Human.cpp Source\Scene\SceneGame.cpp
          SceneGame.cpp
-         Main.cpp
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\main.cpp(233): warning C4100: 'bWindow' : 引数は関数の本体部で 1 度も参照されません。
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\main.cpp(233): warning C4100: 'hWnd' : 引数は関数の本体部で 1 度も参照されません。
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\main.cpp(233): warning C4100: 'hInstance' : 引数は関数の本体部で 1 度も参照されません。
-         fontTexture.cpp
-     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\fonttexture\fonttexture.cpp(77): warning C4101: 'hr' : ローカル変数は 1 度も使われていません。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\scene\scenegame.cpp(190): warning C4244: '引数' : 'LONG' から 'const float' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\scene\scenegame.cpp(203): warning C4244: '引数' : 'LONG' から 'const float' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\scene\scenegame.cpp(207): warning C4244: '引数' : 'LONG' から 'const float' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\scene\scenegame.cpp(227): warning C4244: '引数' : 'const int' から 'float' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\scene\scenegame.cpp(227): warning C4244: '引数' : 'const int' から 'const float' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\scene\scenegame.cpp(281): warning C4244: '=' : 'int' から 'TCHAR' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\scene\scenegame.cpp(287): warning C4244: '引数' : 'const int' から 'FLOAT' への変換です。データが失われる可能性があります。
+         Human.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\human\human.cpp(130): warning C4244: '=' : 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\human\human.cpp(131): warning C4244: '=' : 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.lib" /MACHINE:X86 Debug\Common.obj
          Debug\Collision.obj
@@ -30,6 +25,7 @@
          Debug\Fade.obj
          Debug\FontString.obj
          Debug\fontTexture.obj
+         Debug\Human.obj
          Debug\Input.obj
          Debug\InputJoypad.obj
          Debug\InputKeyboard.obj
@@ -37,6 +33,7 @@
          Debug\InputXInput.obj
          Debug\Main.obj
          Debug\Object2D.obj
+         Debug\Object2DHuman.obj
          Debug\ObjectManager.obj
          Debug\Pause.obj
          Debug\Renderer.obj
@@ -62,4 +59,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:10.94
+経過時間 00:00:01.32

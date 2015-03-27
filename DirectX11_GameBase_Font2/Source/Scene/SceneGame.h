@@ -20,6 +20,8 @@
 //	前方宣言
 //------------------------------------------------------------------------------
 class CSprite;
+class CHuman;
+class CFontString;
 
 /**
 * @brief タイトル画面クラス
@@ -98,11 +100,20 @@ public:
 	*/
 	void DrawExec(void);
 
-
+	/**
+	*	スコア更新処理
+	*	@param void
+	*	@return void
+	*/
+	void UpdateScore();
 
 private:
 	
 	CSprite* m_pBG;	//! 背景
+	CHuman** m_ppHuman; //! 人間
+
+	int m_nScorePoint;
+	CFontString* m_pScoreString; //! スコア表示用文字列
 };
 #endif
 //End of File _SCENEGame_H_

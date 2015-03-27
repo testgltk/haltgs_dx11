@@ -123,6 +123,9 @@ void CInputMouse::Update(void)
 		{
 			_mouseStateTrigger.rgbButtons[nCntKey]
 				= ((_mouseState.rgbButtons[nCntKey] ^ mouseState.rgbButtons[nCntKey]) & mouseState.rgbButtons[nCntKey]);
+
+			_mouseStateRelease.rgbButtons[nCntKey]
+				= ((_mouseState.rgbButtons[nCntKey] ^ mouseState.rgbButtons[nCntKey]) & ~mouseState.rgbButtons[nCntKey]);
 		}
 
 		_mouseState = mouseState;
@@ -158,6 +161,16 @@ BOOL CInputMouse::IsLeftPress(void)
 BOOL CInputMouse::IsLeftTrigger(void)
 {
 	return (_mouseStateTrigger.rgbButtons[0] & 0x80) ? TRUE: FALSE;
+}
+
+/**
+*	マウスの左ボタンを離した瞬間か？
+*	@param	void
+*	@return	BOOL 離した瞬間かどうか
+*/
+BOOL CInputMouse::IsLeftRelease(void)
+{
+	return (_mouseStateRelease.rgbButtons[0] & 0x80) ? TRUE : FALSE;
 }
 
 /**

@@ -39,6 +39,7 @@ public:
 	void Finalize(void);
 
 	CInputKeyboard* GetKeyboard(void){ return m_pKeyboard; }
+	CInputMouse*	GetMouse(void){ return m_pMouse; }
 
 	ID3D11Device* GetDevice(void);
 	ID3D11DeviceContext* GetDeviceContext(void);
@@ -57,6 +58,7 @@ private:
 	int SystemCount;
 
 	CInputKeyboard* m_pKeyboard;
+	CInputMouse*	m_pMouse;
 	CRenderer*		m_pRenderer;
 	CSceneManager*	m_pSceneManager;
 	static CSystemManager* m_pInstance;
@@ -66,5 +68,6 @@ private:
 #define GETDEVICE			 CSystemManager::GetInstance()->GetDevice();
 #define GETDEVICECONTEXT	 CSystemManager::GetInstance()->GetDeviceContext();
 #define GETINPUTKEYBOARD	 CSystemManager::GetInstance()->GetKeyboard();
+#define GETINPUTMOUSE		 CSystemManager::GetInstance()->GetMouse();
 #define GETSCENEMANAGER		 CSystemManager::GetInstance()->GetSceneManager();
 #endif

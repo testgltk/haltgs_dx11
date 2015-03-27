@@ -18,11 +18,6 @@
 #include "FontTexture/FontString.h"
 using namespace ns_ConstantTable;
 
-static const CSprite::PARAM param1 = { XMFLOAT2(0, 0), 0.0f,L"Resources/Texture/BlockTexture.png" };
-static const CSprite::PARAM param2 = { XMFLOAT2(SCREEN_WIDTH  * 0.5f, SCREEN_HEIGHT* 0.5f), 0.0f,L"Resources/Texture/field001.jpg" };
-
-CSprite* g_pSprite  = nullptr;
-CSprite* g_pSprite2 = nullptr;
 FontTexture* Font = nullptr;
 CFontString* pString = nullptr;
 CSystemManager* CSystemManager::m_pInstance = nullptr;
@@ -35,16 +30,17 @@ CSystemManager::CSystemManager(void)
 
 	//特殊なものを事前に登録する
 	m_pKeyboard		= new CInputKeyboard();
+	m_pMouse		= new CInputMouse();
 	m_pRenderer		= new CRenderer();
 	m_pSceneManager = new CSceneManager();
-	g_pSprite		= new CSprite(param1);
-	g_pSprite2		= new CSprite(param2);
 
 	EntrySystem(m_pKeyboard);
+	EntrySystem(m_pMouse);
 	EntrySystem(m_pRenderer);
 	EntrySystem(m_pSceneManager);
 
 	m_pKeyboard->Initialize(GetHinstance(), GetHWnd());
+	m_pMouse->Initialize(GetHinstance(), GetHWnd());
 
 
 	Font = new FontTexture();
@@ -55,8 +51,6 @@ CSystemManager::CSystemManager(void)
 
 CSystemManager::~CSystemManager(void)
 {
-	SafeFinalize(g_pSprite);
-	SafeFinalize(g_pSprite2);
 	SafeDelete(Font);
 
 	SafeDelete(pString);
@@ -83,55 +77,6 @@ void CSystemManager::Update(void)
 	}
 
 	//test Code
-	CInputKeyboard* pKeyboard = GetKeyboard();
-	static float fTest = g_pSprite->GetPosition().x;
-	static float fTestY = g_pSprite->GetPosition().y;
-	if (pKeyboard->IsKeyPress(DIK_A))
-	{
-		fTest -= 1.0f;
-		g_pSprite->SetPosition(XMFLOAT2(fTest, fTestY));
-	}
-	else if (pKeyboard->IsKeyPress(DIK_D))
-	{
-		fTest += 1.0f;
-		g_pSprite->SetPosition(XMFLOAT2(fTest, fTestY));
-	}
-	else if (pKeyboard->IsKeyPress(DIK_W))
-	{
-		fTestY -= 1.0f;
-		g_pSprite->SetPosition(XMFLOAT2(fTest, fTestY));
-	}
-	else if (pKeyboard->IsKeyPress(DIK_S))
-	{
-		fTestY += 1.0f;
-		g_pSprite->SetPosition(XMFLOAT2(fTest, fTestY));
-	}
-	else if (pKeyboard->IsKeyPress(DIK_C))
-	{
-		static float fRot = 0.0f;
-		fRot += 0.01f;
-		g_pSprite->SetRotation(fRot);
-	}
-	else if (pKeyboard->IsKeyTrigger(DIK_Z))
-	{
-		g_pSprite->SetPolygonAlign(CSprite::ALIGN_LEFT_TOP);
-	}
-	else if (pKeyboard->IsKeyTrigger(DIK_X))
-	{
-		g_pSprite->SetPolygonAlign(CSprite::ALIGN_CENTER);
-	}
-	else if (pKeyboard->IsKeyTrigger(DIK_8))
-	{
-		g_pSprite->SetColor(XMFLOAT4(0.5f, 0.5f, 0.5f, 0.5f));
-	}
-	else if (pKeyboard->IsKeyTrigger(DIK_9))
-	{
-		//g_pSprite->SetColor(XMFLOAT4(0.5f, 0.5f, 0.5f, 0.5f));
-		//g_pSprite->SetTexture(*Font->GetTexture()->GetResourceView());
-		//g_pSprite->SetTexture(Font->());
-
-
-	}
 
 	static float ft = 0.0f;
 	ft += 0.1f;
@@ -139,7 +84,7 @@ void CSystemManager::Update(void)
 	dNUM++;
 
 	pString->Update();
-	
+	/*
 	pString->printfString(XMFLOAT2(90, 90), L"DX11描画実験処理 %.3f", ft);
 	pString->SetColor(XMFLOAT4(0,0, 1, 1));
 	pString->printfString(XMFLOAT2(230, 190), L"改行の\nテストです\n正確に表示されてますか？");
@@ -152,15 +97,13 @@ void CSystemManager::Update(void)
 	pString->printfString(XMFLOAT2(230, 600), L"そちらでも同様の現象が発生するか教えてください。");
 	pString->printfString(XMFLOAT2(230, 640), L"画面に対してそのような操作をしない限り、壊れないことを確認してます。");
 	pString->printfString(XMFLOAT2(230, 680), L"原因は不明です)");
+	*/
 }
 
 void CSystemManager::Draw(void)
 {	
 	m_pRenderer->Clear();
 	//Rendering...
-
-	g_pSprite2->Draw();
-	g_pSprite->Draw();
 
 	m_pSceneManager->Draw();
 
