@@ -49,7 +49,7 @@ static const char* HUMAN_RANK[] =
 //------------------------------------------------------------------------------
 namespace ns_GameConstant
 {
-	static const int MAX_HUMAN = 50;
+	static const int MAX_HUMAN = 30;
 
 	static const float CURSOR_RADIUS = 5.0f;
 
@@ -62,6 +62,9 @@ namespace ns_GameConstant
 	// スコア表示座標
 	static const int SCORE_POS_X = 1000;
 	static const int SCORE_POS_Y = 100;
+
+	// 残り時間
+	static const int REST_TIME = 600;
 };
 
 /**
@@ -90,12 +93,8 @@ m_nScorePoint(0)
 	// スコア用文字列
 	m_pScoreString = new CFontString();
 
-	//カメラ設定をリセット
-
-
-	//ゲームスコアクリア
-
-	//ゲームデータの動的生成
+	// 残り時間設定
+	m_nRestTime = REST_TIME;
 
 
 	//ゲーム用のシードを設定
@@ -254,6 +253,15 @@ void CSceneGame::UpdateExec(void)
 
 	// スコアを文字に変換する処理
 	UpdateScore();
+
+	// 残り時間減少
+	m_nRestTime--;
+	if(m_nRestTime <= 0)
+	{
+		// リザルトへ
+		CSceneManager* scene_manager = GETSCENEMANAGER;
+		scene_manager->GotoScene(CSceneManager::SCENE_TYPE_RESULT);
+	}
 }
 void CSceneGame::DrawExec(void)
 {

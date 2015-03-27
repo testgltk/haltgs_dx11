@@ -114,6 +114,8 @@ private:
 
 	int m_nScorePoint;
 	CFontString* m_pScoreString; //! スコア表示用文字列
+
+	int m_nRestTime;
 };
 #endif
 //End of File _SCENEGame_H_

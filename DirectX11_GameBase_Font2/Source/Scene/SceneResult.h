@@ -59,14 +59,10 @@ public:
 	void Draw(void);
 
 private:
-	CSound*			m_pBGM;			///> BGM1個数
-	CSound*			m_pSEDecision;	///> 決定キー
-	CFade*			m_pFade;		///> フェード
-	CSprite*		m_BG;			///> 背景
-	CSprite*		m_pLogo;		///> ロゴ
-	CSpriteFlush*	m_pAnyKey;		///> 案内用
-	CSprite*		m_pScoreText;	///> スコアのテキスト
-	CScore*			m_pScore;		///> スコア表示用
+	CSprite* m_pBG;
+	CSprite* m_pPushEnter;
+	float m_alpha;
+	float m_rate;
 };
 #endif
 //End of File _SCENERESULT_H_
