@@ -47,8 +47,14 @@ CSceneLogo::~CSceneLogo(void)
 void CSceneLogo::Update(void)
 {
 	using namespace ns_LogoConstant;
+	CInputKeyboard* input_keyboard = GETINPUTKEYBOARD;
 
-	
+	if(input_keyboard->IsKeyTrigger(DIK_RETURN))
+	{
+		CSceneManager* scene_manager = GETSCENEMANAGER;
+		scene_manager->GotoScene(CSceneManager::SCENE_TYPE_TITLE);
+	}
+
 }
 
 /**

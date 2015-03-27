@@ -54,8 +54,7 @@ public:
 	void Draw(void);
 
 private:
-
-	CSprite* m_pBackground;	//! îwåi
+	CSprite* m_pBG;
 };
 #endif
 //End of File _SCENETITLE_H_

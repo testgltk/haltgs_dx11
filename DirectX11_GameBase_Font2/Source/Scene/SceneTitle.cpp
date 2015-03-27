@@ -9,10 +9,7 @@
 //	インクルード
 //------------------------------------------------------------------------------
 #include "SceneTitle.h"
-#include "System/SystemManager.h"
 #include "Sprite/Sprite.h"
-#include "Input/InputMouse.h"
-#include "SceneManager.h"
 
 //------------------------------------------------------------------------------
 //	定数
@@ -27,18 +24,14 @@ namespace ns_TitleConstant
 * @param	void
 * @return	void
 */
-CSceneTitle::CSceneTitle(void) :
-m_pBackground(nullptr)
-	
+CSceneTitle::CSceneTitle(void)
 {
+	CSprite::PARAM param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/BlockTexture.png"};
 	using namespace ns_TitleConstant;
-	using namespace ns_ConstantTable;
-
-
-	const CSprite::PARAM param1 = { XMFLOAT2(SCREEN_WIDTH  * 0.5f, SCREEN_HEIGHT* 0.5f), 0.0f, L"Resources/Texture/BlockTexture.png" };
-	m_pBackground = new CSprite(param1);
-	m_pBackground->SetWidth(SCREEN_WIDTH);
-	m_pBackground->SetHeight(SCREEN_HEIGHT);
+	m_pBG = new CSprite(param);
+	m_pBG->SetWidth(ns_ConstantTable::SCREEN_WIDTH);
+	m_pBG->SetHeight(ns_ConstantTable::SCREEN_HEIGHT);
+	m_pBG->SetPolygonAlign(CSprite::ALIGN_LEFT_TOP);
 }
 
 /**
@@ -46,7 +39,7 @@ m_pBackground(nullptr)
 */
 CSceneTitle::~CSceneTitle(void)
 {
-	//SafeDelete(m_pBackground);
+	SafeDelete(m_pBG);
 }
 
 /**
@@ -58,18 +51,7 @@ void CSceneTitle::Update(void)
 {
 	using namespace ns_TitleConstant;
 
-	// 入力で遷移
-	CInputKeyboard *pKey = GETINPUTKEYBOARD;
-	CInputMouse* pMs = GETINPUTMOUSE;
-
-	if(pKey->IsKeyTrigger(DIK_RETURN) ||
-		pMs->IsLeftPress())
-	{
-		CSceneManager *pSm = GETSCENEMANAGER;
-		pSm->GotoScene(CSceneManager::SCENE_TYPE_GAME);
-	}
-
-	m_pBackground->Update();
+	m_pBG->Update();
 }
 
 /**
@@ -79,5 +61,5 @@ void CSceneTitle::Update(void)
 */
 void CSceneTitle::Draw(void)
 {
-	m_pBackground->Draw();
+	m_pBG->Draw();
 }

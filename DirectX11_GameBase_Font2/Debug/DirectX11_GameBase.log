@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 ﻿2015/03/27 11:51:32 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット)。
      1>InitializeBuildStatus:
          "AlwaysCreate" が指定されたため "Debug\DirectX1.DCE7FCA3.tlog\unsuccessfulbuild" を作成しています。
        ClCompile:
+=======
+﻿2015/03/27 11:41:38 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+>>>>>>> origin/dev/title
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Source /ZI /nologo /W4 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\DirectX11_GameBase.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4505 /FIstdafx.h /FICommon/Common.h /analyze- /errorReport:prompt Source\Scene\SceneTitle.cpp
          SceneTitle.cpp
        Link:
@@ -47,4 +53,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:00.93
+経過時間 00:00:00.81
