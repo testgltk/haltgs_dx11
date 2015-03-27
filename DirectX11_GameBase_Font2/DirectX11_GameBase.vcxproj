@@ -20,6 +20,7 @@
     <ClInclude Include="Source\Common\Common.h" />
     <ClInclude Include="Source\Common\ConstantTable.h" />
     <ClInclude Include="Source\Common\DebugModule.h" />
+    <ClInclude Include="Source\Common\kbList.h" />
     <ClInclude Include="Source\Common\MathUtility.h" />
     <ClInclude Include="Source\Common\MyAssert.h" />
     <ClInclude Include="Source\Common\Random.h" />
@@ -30,12 +31,14 @@
     <ClInclude Include="Source\Fade\Fade.h" />
     <ClInclude Include="Source\FontTexture\FontString.h" />
     <ClInclude Include="Source\FontTexture\fontTexture.h" />
+    <ClInclude Include="Source\Human\Human.h" />
     <ClInclude Include="Source\Input\Input.h" />
     <ClInclude Include="Source\Input\InputJoypad.h" />
     <ClInclude Include="Source\Input\InputKeyboard.h" />
     <ClInclude Include="Source\Input\InputMouse.h" />
     <ClInclude Include="Source\Input\InputXInput.h" />
     <ClInclude Include="Source\Object\Object2D.h" />
+    <ClInclude Include="Source\Object\Object2DHuman.h" />
     <ClInclude Include="Source\Object\ObjectManager.h" />
     <ClInclude Include="Source\Pause\Pause.h" />
     <ClInclude Include="Source\Renderer\Renderer.h" />
@@ -67,6 +70,7 @@
     <ClCompile Include="Source\Fade\Fade.cpp" />
     <ClCompile Include="Source\FontTexture\FontString.cpp" />
     <ClCompile Include="Source\FontTexture\fontTexture.cpp" />
+    <ClCompile Include="Source\Human\Human.cpp" />
     <ClCompile Include="Source\Input\Input.cpp" />
     <ClCompile Include="Source\Input\InputJoypad.cpp" />
     <ClCompile Include="Source\Input\InputKeyboard.cpp" />
@@ -74,6 +78,7 @@
     <ClCompile Include="Source\Input\InputXInput.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Object\Object2D.cpp" />
+    <ClCompile Include="Source\Object\Object2DHuman.cpp" />
     <ClCompile Include="Source\Object\ObjectManager.cpp" />
     <ClCompile Include="Source\Pause\Pause.cpp" />
     <ClCompile Include="Source\Renderer\Renderer.cpp" />

@@ -19,6 +19,7 @@
 //------------------------------------------------------------------------------
 //	前方宣言
 //------------------------------------------------------------------------------
+class CSprite;
 
 /**
 * @brief タイトル画面クラス
@@ -53,6 +54,10 @@ public:
 	void Draw(void);
 
 private:
+	CSprite* m_pBG;
+	CSprite* m_pPushEnter;
+	float m_alpha;
+	float m_rate;
 };
 #endif
 //End of File _SCENETITLE_H_

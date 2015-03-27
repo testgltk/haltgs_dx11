@@ -75,6 +75,13 @@ public:
 	BOOL IsLeftTrigger	(void);
 
 	/**
+	*	マウスの左ボタンを離した瞬間か？
+	*	@param	void
+	*	@return	BOOL 離した瞬間かどうか
+	*/
+	BOOL IsLeftRelease(void);
+
+	/**
 	*	マウスの右ボタンを押し続けてるか？
 	*	@param	void
 	*	@return	BOOL 押されてるかどうか
@@ -140,6 +147,7 @@ public:
 private:
 	DIMOUSESTATE2	_mouseState;		///> マウスの状態を受け取るワーク
 	DIMOUSESTATE2	_mouseStateTrigger;	///> トリガーワーク
+	DIMOUSESTATE2	_mouseStateRelease;	///> リリースワーク
 	POINT			_posMouseWorld;		///> マウスのスクリーン座標
 };
 #endif
