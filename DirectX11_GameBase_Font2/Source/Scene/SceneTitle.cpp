@@ -26,8 +26,8 @@ namespace ns_TitleConstant
 */
 CSceneTitle::CSceneTitle(void)
 {
-	CSprite::PARAM bg_param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/TitleBg.png"};
-	CSprite::PARAM pe_param = {XMFLOAT2(ns_ConstantTable::SCREEN_WIDTH * 0.5f,ns_ConstantTable::SCREEN_HEIGHT - 100.0f),0.0f,L"Resources/Texture/PushEnter.png"};
+	CSprite::PARAM bg_param = {XMFLOAT2(0,0),0.0f,L"Resources/Texture/TITLEBG2.png"};
+	CSprite::PARAM pe_param = {XMFLOAT2(ns_ConstantTable::SCREEN_WIDTH * 0.5f,ns_ConstantTable::SCREEN_HEIGHT - 100.0f),0.0f,L"Resources/Texture/PUSHENTER.png"};
 	using namespace ns_TitleConstant;
 	m_pBG = new CSprite(bg_param);
 	m_pBG->SetWidth(ns_ConstantTable::SCREEN_WIDTH);
