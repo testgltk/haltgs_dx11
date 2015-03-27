@@ -220,7 +220,7 @@ ID3D11ShaderResourceView* FontTexture::Create(TCHAR* c, int fontsize)
 	srvDesc.Texture2D.MipLevels			= texDesc.MipLevels;
 	hr = pDevice->CreateShaderResourceView(tex2D, &srvDesc, &m_Datas[hitID].m_pTextureResource);
 	
-	SafeRelease(tex2D);
+	//SafeRelease(tex2D);
 	SafeDeleteArray(ptr);
 
 	return m_Datas[hitID].m_pTextureResource;

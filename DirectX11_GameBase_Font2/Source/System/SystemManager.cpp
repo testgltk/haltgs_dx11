@@ -35,16 +35,19 @@ CSystemManager::CSystemManager(void)
 
 	//“Áê‚È‚à‚Ì‚ğ–‘O‚É“o˜^‚·‚é
 	m_pKeyboard		= new CInputKeyboard();
+	m_pMouse		= new CInputMouse();
 	m_pRenderer		= new CRenderer();
 	m_pSceneManager = new CSceneManager();
 	g_pSprite		= new CSprite(param1);
 	g_pSprite2		= new CSprite(param2);
 
 	EntrySystem(m_pKeyboard);
+	EntrySystem(m_pMouse);
 	EntrySystem(m_pRenderer);
 	EntrySystem(m_pSceneManager);
 
 	m_pKeyboard->Initialize(GetHinstance(), GetHWnd());
+	m_pMouse->Initialize(GetHinstance(), GetHWnd());
 
 
 	Font = new FontTexture();
@@ -132,6 +135,10 @@ void CSystemManager::Update(void)
 
 
 	}
+
+	CInputMouse* pM = m_pMouse;
+	POINT* p = pM->GetPosWorld();
+	g_pSprite->SetPosition(XMFLOAT2(p->x, p->y));
 
 	static float ft = 0.0f;
 	ft += 0.1f;
