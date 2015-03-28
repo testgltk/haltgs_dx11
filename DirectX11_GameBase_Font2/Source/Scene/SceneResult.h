@@ -63,6 +63,8 @@ private:
 	CSprite* m_pPushEnter;
 	float m_alpha;
 	float m_rate;
+
+	int m_nScorePoint;
 };
 #endif
 //End of File _SCENERESULT_H_

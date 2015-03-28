@@ -19,8 +19,10 @@
 using namespace ns_ConstantTable;
 
 FontTexture* Font = nullptr;
-CFontString* pString = nullptr;
 CSystemManager* CSystemManager::m_pInstance = nullptr;
+
+// 静的メンバ変数
+int CSystemManager::m_snScore = 0;
 
 CSystemManager::CSystemManager(void)
 	:SystemCount(0)
@@ -45,7 +47,7 @@ CSystemManager::CSystemManager(void)
 
 	Font = new FontTexture();
 	Font->Create(TEXT("A"), 256);
-	pString = new CFontString();
+	m_pString = new CFontString();
 	
 }
 
@@ -53,7 +55,7 @@ CSystemManager::~CSystemManager(void)
 {
 	SafeDelete(Font);
 
-	SafeDelete(pString);
+	SafeDelete(m_pString);
 }
 
 void CSystemManager::EntrySystem(ISystem* pSystem)
@@ -71,6 +73,8 @@ void CSystemManager::EntrySystem(ISystem* pSystem)
 
 void CSystemManager::Update(void)
 {
+	m_pString->Update();
+
 	for (int i = 0; i < SystemCount; i++)
 	{
 		m_pSystems[i]->Update();
@@ -83,20 +87,19 @@ void CSystemManager::Update(void)
 	static int dNUM = 0;
 	dNUM++;
 
-	pString->Update();
 	/*
-	pString->printfString(XMFLOAT2(90, 90), L"DX11描画実験処理 %.3f", ft);
-	pString->SetColor(XMFLOAT4(0,0, 1, 1));
-	pString->printfString(XMFLOAT2(230, 190), L"改行の\nテストです\n正確に表示されてますか？");
-	pString->SetColor(XMFLOAT4(1, 1, 0, 1));
-	pString->printfString(XMFLOAT2(230, 390), L"もし表示が可能になったら次のことをためしてください。");
-	pString->printfString(XMFLOAT2(230, 440), L"[1]:メモリリークの有無確認");
-	pString->printfString(XMFLOAT2(230, 480), L"[2]:画面の最大化を何度も押したり、最小化を何度もおしたりする");
-	pString->printfString(XMFLOAT2(230, 520), L"(こちらでその動作により文字列が壊れる現象が確認できてます。");
-	pString->printfString(XMFLOAT2(230, 560), L"壊れ方は毎回異なります");
-	pString->printfString(XMFLOAT2(230, 600), L"そちらでも同様の現象が発生するか教えてください。");
-	pString->printfString(XMFLOAT2(230, 640), L"画面に対してそのような操作をしない限り、壊れないことを確認してます。");
-	pString->printfString(XMFLOAT2(230, 680), L"原因は不明です)");
+	m_pString->printfString(XMFLOAT2(90, 90), L"DX11描画実験処理 %.3f", ft);
+	m_pString->SetColor(XMFLOAT4(0,0, 1, 1));
+	m_pString->printfString(XMFLOAT2(230, 190), L"改行の\nテストです\n正確に表示されてますか？");
+	m_pString->SetColor(XMFLOAT4(1, 1, 0, 1));
+	m_pString->printfString(XMFLOAT2(230, 390), L"もし表示が可能になったら次のことをためしてください。");
+	m_pString->printfString(XMFLOAT2(230, 440), L"[1]:メモリリークの有無確認");
+	m_pString->printfString(XMFLOAT2(230, 480), L"[2]:画面の最大化を何度も押したり、最小化を何度もおしたりする");
+	m_pString->printfString(XMFLOAT2(230, 520), L"(こちらでその動作により文字列が壊れる現象が確認できてます。");
+	m_pString->printfString(XMFLOAT2(230, 560), L"壊れ方は毎回異なります");
+	m_pString->printfString(XMFLOAT2(230, 600), L"そちらでも同様の現象が発生するか教えてください。");
+	m_pString->printfString(XMFLOAT2(230, 640), L"画面に対してそのような操作をしない限り、壊れないことを確認してます。");
+	m_pString->printfString(XMFLOAT2(230, 680), L"原因は不明です)");
 	*/
 }
 
@@ -109,13 +112,13 @@ void CSystemManager::Draw(void)
 
 	//const auto startTime = std::chrono::system_clock::now();
 	////// TODO: ここに計測したい処理を記述
-	//pString->Draw(); // おそろしいことに12-19mlsec! 改善の必要あり
+	//m_pString->Draw(); // おそろしいことに12-19mlsec! 改善の必要あり
 	//const auto endTime = std::chrono::system_clock::now();
 	//const auto timeSpan = endTime - startTime;
 	//OUTPUT(L"処理時間:%d", std::chrono::duration_cast<std::chrono::milliseconds>(timeSpan).count());
 	//std::cout << "処理時間:" << std::chrono::duration_cast<std::chrono::milliseconds>(timeSpan).count() << "[ms]" << std::endl;
 	
-	pString->Draw();
+	m_pString->Draw();
 	m_pRenderer->Present();
 
 	m_pSceneManager->Change();

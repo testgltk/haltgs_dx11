@@ -1,21 +1,143 @@
-﻿2015/03/27 9:14:15 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット)。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Source /Zi /nologo /W4 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /wd4005 /FIstdafx.h /FICommon/Common.h /analyze- /errorReport:prompt Source\FontTexture\FontString.cpp Source\FontTexture\fontTexture.cpp Source\System\SystemManager.cpp
+﻿2015/03/27 19:28:39 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Rebuild ターゲット)。
+     1>_PrepareForClean:
+         ファイル "Release\DirectX1.DCE7FCA3.tlog\DirectX11_GameBase.lastbuildstate" を削除しています。
+       InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Release\DirectX1.DCE7FCA3.tlog\unsuccessfulbuild" を作成しています。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Source /Zi /nologo /W4 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /wd4005 /FIstdafx.h /FICommon/Common.h /analyze- /errorReport:prompt Common.cpp Source\Collision\Collision.cpp Source\Collision\CollisionDetector.cpp Source\Common\DebugModule.cpp Source\Common\MyAssert.cpp Source\Common\Random.cpp Source\Fade\Fade.cpp Source\FontTexture\FontString.cpp Source\FontTexture\fontTexture.cpp Source\Human\Human.cpp Source\Input\Input.cpp Source\Input\InputJoypad.cpp Source\Input\InputKeyboard.cpp Source\Input\InputMouse.cpp Source\Input\InputXInput.cpp Source\Main.cpp Source\Object\Object2D.cpp Source\Object\Object2DHuman.cpp Source\Object\ObjectManager.cpp Source\Pause\Pause.cpp Source\Renderer\Renderer.cpp Source\Scene\SceneClear.cpp Source\Scene\SceneDebug.cpp Source\Scene\SceneDemo.cpp Source\Scene\SceneGame.cpp Source\Scene\SceneGameOver.cpp Source\Scene\SceneLogo.cpp Source\Scene\SceneManager.cpp Source\Scene\SceneRanking.cpp Source\Scene\SceneResult.cpp Source\Scene\SceneTitle.cpp Source\Score\Score.cpp Source\Sprite\Sprite.cpp Source\System\SystemManager.cpp Source\Timer\Timer.cpp
+         Common.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Collision.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         CollisionDetector.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         DebugModule.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         MyAssert.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Random.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Fade.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
          FontString.cpp
      1>Source\FontTexture\FontString.cpp(46): warning C4244: '=' : 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
-     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
          fontTexture.cpp
      1>Source\FontTexture\fontTexture.cpp(77): warning C4101: 'hr' : ローカル変数は 1 度も使われていません。
-     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
-     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Human.cpp
+     1>Source\Human\Human.cpp(130): warning C4244: '=' : 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>Source\Human\Human.cpp(131): warning C4244: '=' : 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Input.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         InputJoypad.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         InputKeyboard.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         InputMouse.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         InputXInput.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Main.cpp
+     1>Source\Main.cpp(233): warning C4100: 'bWindow' : 引数は関数の本体部で 1 度も参照されません。
+     1>Source\Main.cpp(233): warning C4100: 'hWnd' : 引数は関数の本体部で 1 度も参照されません。
+     1>Source\Main.cpp(233): warning C4100: 'hInstance' : 引数は関数の本体部で 1 度も参照されません。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Object2D.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Object2DHuman.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         ObjectManager.cpp
+     1>Source\Object\ObjectManager.cpp(52): warning C4100: 'pObj' : 引数は関数の本体部で 1 度も参照されません。
+     1>Source\Object\ObjectManager.cpp(52): warning C4100: 'nPriority' : 引数は関数の本体部で 1 度も参照されません。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Pause.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         コンパイル中...
+         Renderer.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneClear.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneDebug.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneDemo.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneGame.cpp
+     1>Source\Scene\SceneGame.cpp(86): warning C4351: 新しい動作: 配列 'CSceneGame::m_aRankBuff' の要素は既定で初期化されます
+     1>Source\Scene\SceneGame.cpp(226): warning C4244: '引数' : 'LONG' から 'const float' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(239): warning C4244: '引数' : 'LONG' から 'const float' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(243): warning C4244: '引数' : 'LONG' から 'const float' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(264): warning C4244: '引数' : 'const int' から 'float' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(264): warning C4244: '引数' : 'const int' から 'const float' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(345): warning C4244: '=' : 'int' から 'TCHAR' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(351): warning C4244: '引数' : 'const int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(380): warning C4244: '=' : 'int' から 'TCHAR' への変換です。データが失われる可能性があります。
+     1>Source\Scene\SceneGame.cpp(386): warning C4244: '引数' : 'const int' から 'FLOAT' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneGameOver.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneLogo.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneManager.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneRanking.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneResult.cpp
+     1>Source\Scene\SceneResult.cpp(121): warning C4244: '=' : 'int' から 'TCHAR' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         SceneTitle.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Score.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Sprite.cpp
+     1>Source\Sprite\Sprite.cpp(66): warning C4189: 'pDevice' : ローカル変数が初期化されましたが、参照されていません
+     1>Source\Sprite\Sprite.cpp(247): warning C4244: '=' : 'UINT' から 'float' への変換です。データが失われる可能性があります。
+     1>Source\Sprite\Sprite.cpp(248): warning C4244: '=' : 'UINT' から 'float' への変換です。データが失われる可能性があります。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
          SystemManager.cpp
-     1>Source\System\SystemManager.cpp(33): warning C4351: 新しい動作: 配列 'CSystemManager::m_pSystems' の要素は既定で初期化されます
-     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
-     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+     1>Source\System\SystemManager.cpp(30): warning C4351: 新しい動作: 配列 'CSystemManager::m_pSystems' の要素は既定で初期化されます
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
+         Timer.cpp
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(88): warning C4505: 'ns_MathUtility::ReviceRadians' : 参照されていないローカル関数は削除されました。
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\common\MathUtility.h(108): warning C4505: 'ns_MathUtility::ReviceDegrees' : 参照されていないローカル関数は削除されました。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Release\DirectX11_GameBase.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Release\DirectX11_GameBase.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Release\DirectX11_GameBase.lib" /MACHINE:X86 /SAFESEH Release\Common.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.lib" /MACHINE:X86 /SAFESEH Release\Common.obj
          Release\Collision.obj
          Release\CollisionDetector.obj
          Release\DebugModule.obj
@@ -24,6 +146,7 @@
          Release\Fade.obj
          Release\FontString.obj
          Release\fontTexture.obj
+         Release\Human.obj
          Release\Input.obj
          Release\InputJoypad.obj
          Release\InputKeyboard.obj
@@ -31,6 +154,7 @@
          Release\InputXInput.obj
          Release\Main.obj
          Release\Object2D.obj
+         Release\Object2DHuman.obj
          Release\ObjectManager.obj
          Release\Pause.obj
          Release\Renderer.obj
@@ -49,11 +173,14 @@
          Release\SystemManager.obj
          Release\Timer.obj
          コード生成しています。
-     1>d:\school\git\tgs_spring\directx11_gamebase_font2\source\sprite\sprite.cpp(183): warning C4701: 初期化されていない可能性のあるローカル変数 'hr' が使用されます
+     1>d:\hal\tgs\tgs2015\directx11_gamebase_font2\source\sprite\sprite.cpp(183): warning C4701: 初期化されていない可能性のあるローカル変数 'hr' が使用されます
          コード生成が終了しました。
-         DirectX11_GameBase.vcxproj -> D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\Release\DirectX11_GameBase.exe
-     1>プロジェクト "D:\school\Git\TGS_Spring\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Build ターゲット) のビルドが完了しました。
+         DirectX11_GameBase.vcxproj -> D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.exe
+       FinalizeBuildStatus:
+         ファイル "Release\DirectX1.DCE7FCA3.tlog\unsuccessfulbuild" を削除しています。
+         "Release\DirectX1.DCE7FCA3.tlog\DirectX11_GameBase.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "D:\HAL\TGS\TGS2015\DirectX11_GameBase_Font2\DirectX11_GameBase.vcxproj" (Rebuild ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:07.36
+経過時間 00:00:58.68

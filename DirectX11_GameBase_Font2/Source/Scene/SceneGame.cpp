@@ -28,21 +28,22 @@
 //------------------------------------------------------------------------------
 //	人間の価値
 //------------------------------------------------------------------------------
-static const char* HUMAN_RANK[] =
+static const TCHAR* HUMAN_RANK[] =
 {
-	{"HAPPY CALL!!!"},
-	{"(金のタマゴ)"},
-	{ "汎用A" },
-	{ "汎用B" },
-	{ "汎用S" },
-	{ "汎用D" },
-	{ "汎用E" },
-	{ "汎用F" },
-	{ "汎用G" },
-	{ "汎用H" },
-	{ "汎用I" },
-	{ "汎用J" }
+	{L"HAPPY CALL!!!"},
+	{L"(金のタマゴ)"},
+	{L"汎用A" },
+	{L"汎用B" },
+	{L"汎用S" },
+	{L"汎用D" },
+	{L"汎用E" },
+	{L"汎用F" },
+	{L"汎用G" },
+	{L"汎用H" },
+	{L"汎用I" },
+	{L"汎用J" }
 };
+static const int MAX_HUMAN_RANK = sizeof(HUMAN_RANK) / sizeof(HUMAN_RANK[0]);
 
 //------------------------------------------------------------------------------
 //	定数
@@ -67,13 +68,21 @@ namespace ns_GameConstant
 	static const int REST_TIME = 600;
 };
 
+// マクロ
+#define STRING_USE
+
 /**
 * @brief Constructor
 * @param	void
 * @return	void
 */
 CSceneGame::CSceneGame(void) :
-m_nScorePoint(0)
+m_nScorePoint(0),
+m_aRankBuff(),
+m_nTempPtr(0),
+m_aRankPos(),
+m_aColor(),
+m_nColorPtr(0)
 {
 	using namespace ns_GameConstant;
 	// 背景生成
@@ -90,11 +99,22 @@ m_nScorePoint(0)
 		m_ppHuman[i] = new CHuman();
 	}
 
-	// スコア用文字列
-	m_pScoreString = new CFontString();
-
 	// 残り時間設定
 	m_nRestTime = REST_TIME;
+
+	// ランクバッファ初期化
+	for(int i = 0; i < MAX_RANK; i++)
+	{
+		m_aRankBuff[i] = -1;
+	}
+
+	// カラーバッファ初期化
+	float ftemp = 0;
+	for(int i = 0; i < MAX_COLOR; i++)
+	{
+		ftemp = (MAX_COLOR - i) / (float)MAX_COLOR;
+		m_aColor[i] = XMFLOAT4(ftemp, 0, 0, 1);
+	}
 
 
 	//ゲーム用のシードを設定
@@ -120,7 +140,6 @@ CSceneGame::~CSceneGame(void)
 
 	SafeDeleteArray(m_ppHuman);
 
-	SafeDelete(m_pScoreString);
 }
 
 /**
@@ -238,6 +257,7 @@ void CSceneGame::UpdateExec(void)
 		}
 	}
 
+	CFontString* pString = GETFONT;
 	// 企業と人間の当たり判定
 	for(int i = 0; i < MAX_HUMAN; i++)
 	{
@@ -245,19 +265,39 @@ void CSceneGame::UpdateExec(void)
 		{
 			// 得点加算
 			m_nScorePoint += 500;
+			// この人間の価値を表示するための設定
+			m_aRankPos[m_nTempPtr] = m_ppHuman[i]->getPos();
+			m_aRankBuff[m_nTempPtr] = Random::GetRange(0, MAX_HUMAN_RANK - 1);
+			m_nTempPtr++; m_nTempPtr %= MAX_RANK;
 			// 人間のリセット
 			m_ppHuman[i]->reset();
-			// この人間の価値
 		}
 	}
 
+
 	// スコアを文字に変換する処理
 	UpdateScore();
+	// 時間を文字列変換
+	UpdateTime();
+
+	// 人間の価値表示
+	for(int i = 0; i < MAX_RANK; i++)
+	{
+		if(-1 != m_aRankBuff[i])
+		{
+			pString->SetColor(m_aColor[m_nColorPtr]);
+			pString->printfString(m_aRankPos[i], HUMAN_RANK[m_aRankBuff[i]]);
+		}
+	}
+	// カラーアニメーション設定
+	m_nColorPtr++; m_nColorPtr %= MAX_COLOR;
 
 	// 残り時間減少
 	m_nRestTime--;
 	if(m_nRestTime <= 0)
 	{
+		// スコア設定
+		CSystemManager::GetInstance()->setScore(m_nScorePoint);
 		// リザルトへ
 		CSceneManager* scene_manager = GETSCENEMANAGER;
 		scene_manager->GotoScene(CSceneManager::SCENE_TYPE_RESULT);
@@ -276,9 +316,6 @@ void CSceneGame::DrawExec(void)
 	{
 		m_ppHuman[i]->Draw();
 	}
-
-	// スコア
-	m_pScoreString->Draw();
 }
 
 /**
@@ -292,7 +329,7 @@ void CSceneGame::UpdateScore()
 
 	// 7桁スコア
 	const int DIGITS = 7;
-	TCHAR aScore[DIGITS + 1];
+	TCHAR aScore[DIGITS + 1] = L"";
 
 	// 桁数ループ
 	int nDecimalDivider = 1000000;
@@ -310,7 +347,41 @@ void CSceneGame::UpdateScore()
 	// 終端文字
 	aScore[DIGITS] = '\0';
 
-	m_pScoreString->Update();
-	m_pScoreString->printfString(XMFLOAT2(SCORE_POS_X, SCORE_POS_Y), aScore);
+	CFontString *pStr = GETFONT;
+	pStr->printfString(XMFLOAT2(SCORE_POS_X, SCORE_POS_Y), aScore);
+}
 
+/**
+*	時間更新処理
+*	@param void
+*	@return void
+*/
+void CSceneGame::UpdateTime()
+{
+	using namespace ns_GameConstant;
+
+	// 7桁スコア
+	const int DIGITS = 2;
+	TCHAR aScore[DIGITS + 1] = L"";
+
+	// 秒時間
+	int nSec = (int)(m_nRestTime / 60.0f);
+	// 桁数ループ
+	int nDecimalDivider = 10;
+	// 次に表示したい点数
+	int nNextPoint = nSec;
+	for(int nDig = 0; nDig < DIGITS; nDig++)
+	{
+		int nDispNum = nNextPoint / nDecimalDivider;
+		nNextPoint %= nDecimalDivider;
+		nDecimalDivider /= 10;
+
+		// 数値を文字に変換
+		aScore[nDig] = nDispNum + 0x30;	// アスキー文字分オフセット
+	}
+	// 終端文字
+	aScore[DIGITS] = '\0';
+
+	CFontString *pStr = GETFONT;
+	pStr->printfString(XMFLOAT2(200, SCORE_POS_Y), aScore);
 }

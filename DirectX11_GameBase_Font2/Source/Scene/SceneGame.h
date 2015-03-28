@@ -107,15 +107,27 @@ public:
 	*/
 	void UpdateScore();
 
+	void UpdateTime();
+
 private:
 	
 	CSprite* m_pBG;	//! 背景
 	CHuman** m_ppHuman; //! 人間
 
 	int m_nScorePoint;
-	CFontString* m_pScoreString; //! スコア表示用文字列
 
 	int m_nRestTime;
+
+	// 人間の価値を表示
+	static const int MAX_RANK = 10;
+	int m_aRankBuff[MAX_RANK];
+	XMFLOAT2 m_aRankPos[MAX_RANK];
+	int m_nTempPtr;
+
+	// カラーアニメーション
+	static const int MAX_COLOR = 20;
+	XMFLOAT4 m_aColor[MAX_COLOR];
+	int m_nColorPtr;
 };
 #endif
 //End of File _SCENEGame_H_

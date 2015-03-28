@@ -152,6 +152,10 @@ ID3D11ShaderResourceView* FontTexture::Create(TCHAR* c, int fontsize)
 	GetTextMetrics(m_HDC, &TM);
 	
 	DWORD size = GetGlyphOutline(m_HDC, code, GGO_GRAY4_BITMAP, &GM, 0, NULL, &Mat);
+	if(GDI_ERROR == size)
+	{
+		return nullptr;
+	}
 	BYTE* ptr = new BYTE[ size ];
 	GetGlyphOutline(m_HDC, code, GGO_GRAY4_BITMAP, &GM, size, ptr, &Mat);
 

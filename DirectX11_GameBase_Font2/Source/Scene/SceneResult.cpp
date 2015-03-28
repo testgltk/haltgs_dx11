@@ -11,6 +11,7 @@
 #include "SceneResult.h"
 #include "system/systemmanager.h"
 #include "Sprite/Sprite.h"
+#include "fonttexture/FontString.h"
 
 //------------------------------------------------------------------------------
 //	定数
@@ -41,6 +42,8 @@ CSceneResult::CSceneResult(void)
 	m_pPushEnter = new CSprite(pe_param);
 	m_alpha = 0.0f;
 	m_rate = 0.1f;
+
+	m_nScorePoint = CSystemManager::GetInstance()->getScore();
 }
 
 /**
@@ -99,4 +102,27 @@ void CSceneResult::Draw(void)
 {
 	m_pBG->Draw();
 	m_pPushEnter->Draw();
+
+	// 7桁スコア
+	const int DIGITS = 7;
+	TCHAR aScore[DIGITS + 1] = L"";
+
+	// 桁数ループ
+	int nDecimalDivider = 1000000;
+	// 次に表示したい点数
+	int nNextPoint = m_nScorePoint;
+	for(int nDig = 0; nDig < DIGITS; nDig++)
+	{
+		int nDispNum = nNextPoint / nDecimalDivider;
+		nNextPoint %= nDecimalDivider;
+		nDecimalDivider /= 10;
+
+		// 数値を文字に変換
+		aScore[nDig] = nDispNum + 0x30;	// アスキー文字分オフセット
+	}
+	// 終端文字
+	aScore[DIGITS] = '\0';
+
+	CFontString *pStr = GETFONT;
+	pStr->printfString(XMFLOAT2(500, 400), aScore);
 }
